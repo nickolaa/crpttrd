@@ -8,8 +8,8 @@ import requests
 
 # доступ к API-серверу
 server = 'https://api.livecoin.net'
-api_key = 'JeTNPgXJUyH94Wh5qpGUnhWeYgSjdaQs'
-sign_key = 'Y67GfpUZ6usy5xqHbzu2J69eezkab3sV'.encode('utf-8')
+api_key = ''
+sign_key = ''.encode('utf-8')
 trade_pairs = {'currpair': ['XMR/BTC', 'LTC/BTC', 'BCH/BTC'], 'coin': ['XMR', 'LTC', 'BCH']}  # 'BTC/USD',
 
 # получаем данные по интересуемые пары валют
