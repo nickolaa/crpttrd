@@ -8,8 +8,8 @@ import requests
 
 # доступ к API-серверу
 server = 'https://api.livecoin.net'
-api_key = ''
-sign_key = ''.encode('utf-8')
+api_key = 'JeTNPgXJUyH94Wh5qpGUnhWeYgSjdaQs'
+sign_key = 'Y67GfpUZ6usy5xqHbzu2J69eezkab3sV'
 trade_pairs = {'currpair': ['XMR/BTC', 'LTC/BTC', 'BCH/BTC'], 'coin': ['XMR', 'LTC', 'BCH']}  # 'BTC/USD',
 
 # получаем данные по интересуемые пары валют
@@ -51,6 +51,7 @@ def get_my_balance():
     res = requests.get(server + '/payment/balances', params=params, headers=headers)
     # print(res.url)
     # print(res.json())
+
     balances = []
     for element in res.json():
         if element['type'] == 'available':
