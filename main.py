@@ -1,5 +1,6 @@
 from livecoin.livecoin_api import LivecoinApi
 import main_settings
+from telegram_notification import send_notification
 
 trade_bot = LivecoinApi()
 
@@ -18,17 +19,20 @@ for dl in shitcoin_list:
 trade_bot.cancel_orders(orders_id)
 
 balances = trade_bot.get_balanses()
-print(balances)
+# print(balances)
 
 btc_balance = trade_bot.get_btc_balance(balances)
 
 for balance in balances:
     if str(balance).upper() != 'BTC' and ((trade_bot.get_btc_ex(balance)) not in ex_list):
         ex_list.append(trade_bot.get_btc_ex(balance))
-        # sell this currency
+        # продаем эту валюту
         buys_pr = trade_bot.get_buy_price(trade_bot.get_btc_ex(balance))
-        if (buys_pr) == 0:
-            print('Этой валютой не торговали: ' + str(balance).upper())
+        if buys_pr == 0:
+            # bot.send_message(251077347, 'Этой валютой не торговали: ' + str(balance).upper())
+            send_notification('Этой валютой не торговали: ' + str(balance).upper())
+            # print('Этой валютой не торговали: ' + str(balance).upper())
+            # greet_user('Этой валютой не торговали: ' + str(balance).upper())
             continue
         coin_details = trade_bot.get_coin_details(trade_bot.get_btc_ex(balance))
         if not trade_bot.is_Error(coin_details):
@@ -38,12 +42,17 @@ for balance in balances:
                 trade_bot.sell_currency(trade_bot.get_btc_ex(balance), "{0:.8f}".format(balances[balance]),
                                         "{0:.8f}".format(min_ask))
             else:
-                print('Wait in ' + balance)
+                # print('Wait in ' + balance)
+                send_notification('Ждем момента для слива: ' + balance)
+                # greet_user('Wait in ' + balance)
 
 order_size = trade_bot.get_min_order_size(main_settings.min_order_mult)
 max_num_orders = int((btc_balance * 0.99) / order_size)
 
 pair_ls = trade_bot.get_market_conditions()
+# eth_data = list(filter(lambda x: x.get('symbol') == 'LTC/BTC', pair_ls))
+# if eth_data:
+#     pair_ls = eth_data
 
 rg_list = []
 

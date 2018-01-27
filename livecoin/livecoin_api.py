@@ -5,6 +5,7 @@ from urllib.parse import urlencode
 from collections import OrderedDict
 from livecoin.keys import api_key
 from livecoin.keys import sign_key
+from telegram_notification import send_notification
 
 server_url = 'https://api.livecoin.net'
 server = 'api.livecoin.net'
@@ -149,9 +150,11 @@ class LivecoinApi():
             response = self.post_request(method, data)
             value = response.json()
             if value['cancelled'] == True:
-                print('успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair'])
+                # print('успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair'])
+                send_notification(' '.join(['успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair']]))
             else:
-                print('ошибка отмены ордера #', order['id'], order['pair'])
+                send_notification(' '.join(['ошибка отмены ордера #', order['id'], order['pair']]))
+                # print('ошибка отмены ордера #', order['id'], order['pair'])
 
     def buy_currency(self, pair, quantity, price):
         method = "/exchange/buylimit"
@@ -159,10 +162,11 @@ class LivecoinApi():
         response = self.post_request(method, data)
         value = response.json()
         if value['success'] == True:
-            print('успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:',
-                  value['orderId'])
+            # print('успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
+            send_notification(' '.join(['успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
         else:
-            print(value)
+            # print(value)
+            send_notification(value)
 
     def sell_currency(self, pair, quantity, price):
         method = "/exchange/selllimit"
@@ -170,10 +174,11 @@ class LivecoinApi():
         response = self.post_request(method, data)
         value = response.json()
         if value['success'] == True:
-            print('успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:',
-                  value['orderId'])
+            # print('успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
+            send_notification(' '.join(['успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
         else:
-            print(value)
+            send_notification(value)
+            # print(value)
 
     def get_btc_ex(self, cur):
         return cur + '/BTC'
