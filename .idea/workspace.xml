@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="77bfb1dc-9d4e-437c-9826-19702f0e93f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/telegram_features/.gitignore" afterPath="$PROJECT_DIR$/telegram_features/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/telegram_features/telegram_keys.py" afterPath="$PROJECT_DIR$/telegram_features/telegram_keys.py" />
+      <change beforePath="$PROJECT_DIR$/telegram_features/telegram_get_response.py" afterPath="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
+      <change beforePath="$PROJECT_DIR$/telegram_features/telegram_keys.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/telegram_features/telegram_notification.py" afterPath="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +35,9 @@
       <file leaf-file-name="telegram_notification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/telegram_features/telegram_notification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/telegram_features/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -73,24 +72,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="161" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="200" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="telegram_keys.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/telegram_features/telegram_keys.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +97,8 @@
       <file leaf-file-name="telegram_get_response.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/telegram_features/telegram_get_response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+            <state relative-caret-position="17">
+              <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -150,14 +139,14 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/livecoin/livecoin_api.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_get_command.py" />
-        <option value="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
         <option value="$PROJECT_DIR$/cron_param/crontab_settings.py" />
-        <option value="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
         <option value="$PROJECT_DIR$/main_settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/telegram_features/.gitignore" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_keys.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_private_keys.py" />
+        <option value="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
+        <option value="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
       </list>
     </option>
   </component>
@@ -196,11 +185,6 @@
             <path>
               <item name="bitcoin bot trader" type="b2602c69:ProjectViewProjectNode" />
               <item name="bitcoin bot trader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bitcoin bot trader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bitcoin bot trader" type="462c0819:PsiDirectoryNode" />
-              <item name="telegram_features" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517171138563</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="technical commit 222">
+      <created>1517171454200</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1517171454200</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -420,7 +411,8 @@
     <MESSAGE value="Crontab + telegram2" />
     <MESSAGE value="technical commit" />
     <MESSAGE value="technical commit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="technical commit 1" />
+    <MESSAGE value="technical commit 222" />
+    <option name="LAST_COMMIT_MESSAGE" value="technical commit 222" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -441,9 +433,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,16 +497,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/telegram_features/telegram_get_command.py" />
-    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="161" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="200" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../lesson2/bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -525,14 +505,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cron_param/crontab_settings.py" />
-    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_get_response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -557,20 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_notification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_keys.py">
+    <entry file="file://$PROJECT_DIR$/telegram_features/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -583,11 +545,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telegram_features/.gitignore">
+    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_notification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_get_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_keys.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
