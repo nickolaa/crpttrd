@@ -1,5 +1,5 @@
 from telegram import Bot
-from telegram_features.telegram_private_keys import tel_id, telegram_api_key
+from telegram_features.telegram_keys import tel_id, telegram_api_key
 
 bot = Bot(telegram_api_key)
 

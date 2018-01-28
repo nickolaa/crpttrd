@@ -1,5 +1,5 @@
 from telegram.ext import Updater, CommandHandler
-from telegram_features.telegram_private_keys import telegram_api_key
+from telegram_features.telegram_keys import telegram_api_key
 from cron_param.crontab_settings import start, stop
 
 def start_bot(bot, update):
