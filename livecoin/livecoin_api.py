@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 from collections import OrderedDict
 from livecoin.keys import api_key
 from livecoin.keys import sign_key
-from telegram_notification import send_notification
+from telegram_features.telegram_notification import send_notification
 
 server_url = 'https://api.livecoin.net'
 server = 'api.livecoin.net'
@@ -151,9 +151,13 @@ class LivecoinApi():
             value = response.json()
             if value['cancelled'] == True:
                 # print('успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair'])
-                send_notification(' '.join(['успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair']]))
+                # send_notification(' '.join(['успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair']]))
+                send_notification('успешно отменен ордер # {order} объёмом {value}, {orderpair}'.
+                                  format(order=order['id'], value=value['quantity'], orderpair=order['pair']))
             else:
-                send_notification(' '.join(['ошибка отмены ордера #', order['id'], order['pair']]))
+                # send_notification(' '.join(['ошибка отмены ордера #', order['id'], order['pair']]))
+                send_notification('ошибка отмены ордера #{order}, {orderpair}'.
+                                  format(order=order['id'], orderpair=order['pair']))
                 # print('ошибка отмены ордера #', order['id'], order['pair'])
 
     def buy_currency(self, pair, quantity, price):
@@ -163,7 +167,9 @@ class LivecoinApi():
         value = response.json()
         if value['success'] == True:
             # print('успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
-            send_notification(' '.join(['успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
+            # send_notification(' '.join(['успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
+            send_notification('успешно создан ордер на покупку {quantity}, {pair}, по курсу {price} : {value}'.
+                              format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
         else:
             # print(value)
             send_notification(value)
@@ -175,7 +181,9 @@ class LivecoinApi():
         value = response.json()
         if value['success'] == True:
             # print('успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
-            send_notification(' '.join(['успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
+            # send_notification(' '.join(['успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
+            send_notification('успешно создан ордер на продажу{quantity}, {pair}, по курсу {price} : {value}'.
+                              format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
         else:
             send_notification(value)
             # print(value)

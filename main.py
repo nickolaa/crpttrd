@@ -1,6 +1,6 @@
 from livecoin.livecoin_api import LivecoinApi
 import main_settings
-from telegram_notification import send_notification
+from telegram_features.telegram_notification import send_notification
 
 trade_bot = LivecoinApi()
 
