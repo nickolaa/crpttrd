@@ -150,15 +150,11 @@ class LivecoinApi():
             response = self.post_request(method, data)
             value = response.json()
             if value['cancelled'] == True:
-                # print('успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair'])
-                # send_notification(' '.join(['успешно отменен ордер #', order['id'], 'объёмом', value['quantity'], order['pair']]))
                 send_notification('успешно отменен ордер # {order} объёмом {value}, {orderpair}'.
                                   format(order=order['id'], value=value['quantity'], orderpair=order['pair']))
             else:
-                # send_notification(' '.join(['ошибка отмены ордера #', order['id'], order['pair']]))
                 send_notification('ошибка отмены ордера #{order}, {orderpair}'.
                                   format(order=order['id'], orderpair=order['pair']))
-                # print('ошибка отмены ордера #', order['id'], order['pair'])
 
     def buy_currency(self, pair, quantity, price):
         method = "/exchange/buylimit"
@@ -166,13 +162,10 @@ class LivecoinApi():
         response = self.post_request(method, data)
         value = response.json()
         if value['success'] == True:
-            # print('успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
-            # send_notification(' '.join(['успешно создан ордер на покупку', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
-            send_notification('успешно создан ордер на покупку {quantity}, {pair}, по курсу {price} : {value}'.
+            send_notification('успешно создан ордер на покупку {quantity}, {pair}, по курсу {price} ID: {value}'.
                               format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
         else:
-            # print(value)
-            send_notification(value)
+            send_notification('уже есть ордер на продажу ID: {value}'.format(value=value['orderId']))
 
     def sell_currency(self, pair, quantity, price):
         method = "/exchange/selllimit"
@@ -180,13 +173,10 @@ class LivecoinApi():
         response = self.post_request(method, data)
         value = response.json()
         if value['success'] == True:
-            # print('успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId'])
-            # send_notification(' '.join(['успешно создан ордер на продажу', str(quantity), pair, 'по курсу', str(price), ' #:', value['orderId']]))
             send_notification('успешно создан ордер на продажу{quantity}, {pair}, по курсу {price} : {value}'.
                               format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
         else:
             send_notification(value)
-            # print(value)
 
     def get_btc_ex(self, cur):
         return cur + '/BTC'
