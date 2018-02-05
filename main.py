@@ -1,7 +1,8 @@
 from livecoin.livecoin_api import LivecoinApi
 import main_settings
 from telegram_features.telegram_notification import send_notification
-import random
+import random, time
+from datetime import datetime, timedelta
 from telegram.ext.dispatcher import run_async
 
 
@@ -22,7 +23,12 @@ def init_trader(bot, job):
     # на случай, если не захочется торговать конкретной валютой
     # ex_list.append(trade_bot.get_btc_ex('BCH'))
 
-    trade_bot.cancel_orders(orders_id)
+    for order in orders_id:
+        issuetime_order = order['issuetime']
+        cancel_orders_id = []
+        if datetime.now() - time.ctime(int(issuetime_order * 1000)) >= timedelta(days=main_settings.default_loss_time):
+            cancel_orders_id.append(order)
+    trade_bot.cancel_orders(cancel_orders_id)
 
     balances = trade_bot.get_balanses()
     send_notification('Балансы валют: {}'.format(balances))
@@ -48,7 +54,7 @@ def init_trader(bot, job):
 
 
     order_size = trade_bot.get_min_order_size(main_settings.min_order_mult)
-    max_num_orders = int((btc_balance * 0.99) / order_size)
+    max_num_orders = int((btc_balance * 0.3) / order_size)
 
     pair_ls = trade_bot.get_market_conditions()
 
