@@ -23,9 +23,9 @@ def init_trader(bot, job):
     # на случай, если не захочется торговать конкретной валютой
     # ex_list.append(trade_bot.get_btc_ex('BCH'))
 
+    cancel_orders_id = []
     for order in orders_id:
         issuetime_order = order['issuetime']
-        cancel_orders_id = []
         if datetime.now() - time.ctime(int(issuetime_order * 1000)) >= timedelta(days=main_settings.default_loss_time):
             cancel_orders_id.append(order)
     trade_bot.cancel_orders(cancel_orders_id)
@@ -109,3 +109,7 @@ def init_trader(bot, job):
         i += 1
 
     job.interval = random.randint(300, 500)
+
+
+if __name__ == '__main__':
+    init_trader()
