@@ -104,7 +104,8 @@ class LivecoinApi():
             openorders = openorders['data']
             for order in openorders:
                 if order['orderStatus'] == 'OPEN':
-                    orders_id.append({'pair': order['currencyPair'], 'id': order['id'], 'issuetime': order['issueTime']})
+                    orders_id.append({'pair': order['currencyPair'], 'id': order['id'], 'issuetime': order['issueTime'],
+                                      'type': order['type']})
         return orders_id
 
     def get_partiallyorders(self):

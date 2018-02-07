@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="77bfb1dc-9d4e-437c-9826-19702f0e93f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/livecoin/livecoin_api.py" afterPath="$PROJECT_DIR$/livecoin/livecoin_api.py" />
       <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/main_settings.py" afterPath="$PROJECT_DIR$/main_settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +18,8 @@
     <SUITE FILE_PATH="coverage/bitcoin_bot_trader_2$telegram_get_response.coverage" NAME="telegram_get_response Coverage Results" MODIFIED="1517169147737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram_features" />
     <SUITE FILE_PATH="coverage/bitcoin_bot_trader$telegram_get_response__1_.coverage" NAME="telegram_get_response (1) Coverage Results" MODIFIED="1517859310729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bitcoin_bot_trader$telegram_get_response.coverage" NAME="telegram_get_response Coverage Results" MODIFIED="1517661367024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram_features" />
-    <SUITE FILE_PATH="coverage/bitcoin_bot_trader$main.coverage" NAME="main Coverage Results" MODIFIED="1517892199945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitcoin_bot_trader$main.coverage" NAME="main Coverage Results" MODIFIED="1518031056260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitcoin_bot_trader$111.coverage" NAME="111 Coverage Results" MODIFIED="1518028302038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bitcoin_bot_trader_2$main.coverage" NAME="main Coverage Results" MODIFIED="1517168620814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -24,20 +27,31 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
-              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="1768">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#820#856#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatcher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/telegram/ext/dispatcher.py">
+      <file leaf-file-name="111.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/111.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -46,10 +60,22 @@
       <file leaf-file-name="telegram_get_response.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="455">
               <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="10" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="181" column="8" lean-forward="false" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,10 +110,11 @@
         <option value="$PROJECT_DIR$/telegram_features/telegram_keys.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_private_keys.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
-        <option value="$PROJECT_DIR$/main_settings.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
-        <option value="$PROJECT_DIR$/livecoin/livecoin_api.py" />
         <option value="$PROJECT_DIR$/telegram_get_response.py" />
+        <option value="$PROJECT_DIR$/main_settings.py" />
+        <option value="$PROJECT_DIR$/111.py" />
+        <option value="$PROJECT_DIR$/livecoin/livecoin_api.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -160,6 +187,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bitcoin bot trader 2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/111.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -217,16 +263,18 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
       <item index="1" class="java.lang.String" itemvalue="Python.telegram_get_response" />
       <item index="2" class="java.lang.String" itemvalue="Python.telegram_get_response (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.111" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.telegram_get_response (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.telegram_get_response" />
+        <item index="1" class="java.lang.String" itemvalue="Python.111" />
+        <item index="2" class="java.lang.String" itemvalue="Python.telegram_get_response (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.telegram_get_response" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517865267292</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="cancel orders id, correction">
+      <created>1517892323523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1517892323523</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -407,40 +462,23 @@
     <MESSAGE value="technical commit 222" />
     <MESSAGE value="1. cancel orders id  &#10;2. order size&#10;3. telegram get response" />
     <MESSAGE value="+ telegram get response" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ telegram get response" />
+    <MESSAGE value="cancel orders id, correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="cancel orders id, correction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
+          <line>25</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/telegram_features/telegram_notification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -505,6 +543,7 @@
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#820#856#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -581,6 +620,7 @@
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#820#856#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,35 +781,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_settings.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/telegram/ext/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
+        <state relative-caret-position="376">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+        <state relative-caret-position="113">
+          <caret line="181" column="8" lean-forward="false" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/telegram/ext/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="455">
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="10" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
@@ -777,12 +825,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="1768">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#820#856#0" expanded="false" />
           </folding>
         </state>
       </provider>

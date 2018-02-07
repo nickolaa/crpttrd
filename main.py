@@ -6,13 +6,12 @@ from datetime import datetime, timedelta
 from telegram.ext.dispatcher import run_async
 
 
-@run_async
 def init_trader(bot, job):
 
     trade_bot = LivecoinApi()
 
     orders_id = trade_bot.get_openorders()
-
+    # print(orders_id)  # [{'pair': 'BCH/BTC', 'id': 646583109, 'issuetime': 1518026825182, 'type': 'LIMIT_BUY'}]
     ex_list = trade_bot.get_partiallyorders()
 
     shitcoin_list = trade_bot.get_shitcoin_info()
@@ -23,15 +22,22 @@ def init_trader(bot, job):
     # на случай, если не захочется торговать конкретной валютой
     # ex_list.append(trade_bot.get_btc_ex('BCH'))
 
-    cancel_orders_id = []
+    cancel_buy_orders_id = []
     for order in orders_id:
-        issuetime_order = order['issuetime']
-        if datetime.now() - time.ctime(int(issuetime_order * 1000)) >= timedelta(days=main_settings.default_loss_time):
-            cancel_orders_id.append(order)
-    trade_bot.cancel_orders(cancel_orders_id)
+        # if 'SELL' in orders_id[0]['type']:
+        #     issuetime_order = order['issuetime']
+        #     fuckup_pair = order[0]['pair']
+        #     if datetime.now() - time.ctime(int(issuetime_order) * 1000) >= timedelta(days=main_settings.default_loss_time):
+        #         current_min_ask = trade_bot.get_minask()
+        #         trade_bot.sell_currency(fuckup_pair, "{0:.8f}".format(balances[balance]),
+        #                                 "{0:.8f}".format(current_min_ask))
+        if 'BUY' in orders_id[0]['type']:
+            cancel_buy_orders_id.append(order)
+    trade_bot.cancel_orders(cancel_buy_orders_id)
 
     balances = trade_bot.get_balanses()
     send_notification('Балансы валют: {}'.format(balances))
+
     btc_balance = trade_bot.get_btc_balance(balances)
 
     for balance in balances:
@@ -108,7 +114,7 @@ def init_trader(bot, job):
             order_size = btc_balance
         i += 1
 
-    job.interval = random.randint(300, 500)
+    job.interval = random.randint(180, 300)
 
 
 if __name__ == '__main__':
