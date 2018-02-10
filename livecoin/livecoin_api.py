@@ -87,10 +87,10 @@ class LivecoinApi():
         coin_list = response.json()
         balances = {}
         for coin in coin_list:
-            if ('None' not in str(coin['value'])):
-                if (coin['value'] > 0):
+            if ('None' not in str(coin['available'])):
+                if (coin['available'] > 0):
                     if coin['currency'] not in balances:
-                        balances[coin['currency']] = coin['value']
+                        balances[coin['currency']] = coin['available']
 
         return balances
 
