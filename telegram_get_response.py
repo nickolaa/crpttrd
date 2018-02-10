@@ -33,14 +33,15 @@ def deactivate_trader_bot(bot, update, user_data):
     if trader_job:
         trader_job.schedule_removal()
         send_notification('торговый бот завершил работу')
-    send_notification('торговый бот видимо не завершил работу')
+    else:
+        send_notification('торговый бот не завершил работу')
 
 def main():
     updater = Updater(telegram_api_key)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("activate", activate_trader_bot, pass_job_queue=True, pass_user_data=True))
     dp.add_handler(CommandHandler("deactivate", deactivate_trader_bot, pass_user_data=True))
-    updater.start_polling(timeout=1000)
+    updater.start_polling(timeout=60)
 
 if __name__ == '__main__':
     main()

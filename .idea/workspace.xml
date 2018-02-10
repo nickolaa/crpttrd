@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77bfb1dc-9d4e-437c-9826-19702f0e93f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/livecoin/livecoin_api.py" afterPath="$PROJECT_DIR$/livecoin/livecoin_api.py" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/main_settings.py" afterPath="$PROJECT_DIR$/main_settings.py" />
+      <change beforePath="$PROJECT_DIR$/telegram_get_response.py" afterPath="$PROJECT_DIR$/telegram_get_response.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +25,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="170">
               <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -47,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telegram_get_response.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="telegram_get_response.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="10" />
+            <state relative-caret-position="374">
+              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -59,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
@@ -101,11 +99,11 @@
         <option value="$PROJECT_DIR$/telegram_features/telegram_private_keys.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
-        <option value="$PROJECT_DIR$/telegram_get_response.py" />
         <option value="$PROJECT_DIR$/111.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/main_settings.py" />
         <option value="$PROJECT_DIR$/livecoin/livecoin_api.py" />
+        <option value="$PROJECT_DIR$/telegram_get_response.py" />
       </list>
     </option>
   </component>
@@ -387,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518031328304</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="get available balances">
+      <created>1518276921553</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1518276921553</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -461,7 +466,8 @@
     <MESSAGE value="+ telegram get response" />
     <MESSAGE value="cancel orders id, correction" />
     <MESSAGE value="cancel buy orders modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancel buy orders modified" />
+    <MESSAGE value="get available balances" />
+    <option name="LAST_COMMIT_MESSAGE" value="get available balances" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -795,16 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -821,9 +817,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="92" column="68" lean-forward="false" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="170">
           <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -832,12 +838,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
+    <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="92" column="68" lean-forward="false" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="68" />
+        <state relative-caret-position="374">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
