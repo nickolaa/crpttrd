@@ -175,7 +175,7 @@ class LivecoinApi():
         response = self.post_request(method, data)
         value = response.json()
         if value['success'] == True:
-            send_notification('успешно создан ордер на продажу{quantity}, {pair}, по курсу {price} : {value}'.
+            send_notification('успешно создан ордер на продажу{quantity}, {pair}, по курсу {price} ID: {value}'.
                               format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
         else:
             send_notification(value)

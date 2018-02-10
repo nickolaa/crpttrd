@@ -2,6 +2,7 @@ from livecoin.livecoin_api import LivecoinApi
 import main_settings
 from telegram_features.telegram_notification import send_notification
 from datetime import datetime, timedelta
+import random
 from telegram.ext.dispatcher import run_async
 
 
@@ -10,7 +11,7 @@ def init_trader(bot, job):
     trade_bot = LivecoinApi()
 
     orders_id = trade_bot.get_openorders()
-    # print(orders_id)  # [{'pair': 'BCH/BTC', 'id': 646583109, 'issuetime': 1518026825182, 'type': 'LIMIT_BUY'}]
+
     ex_list = trade_bot.get_partiallyorders()
 
     shitcoin_list = trade_bot.get_shitcoin_info()
@@ -34,16 +35,18 @@ def init_trader(bot, job):
                 current_min_ask = trade_bot.get_minask(fuckup_pair)
                 trade_bot.sell_currency(fuckup_pair, "{0:.8f}".format(fuckup_quantity),
                                         "{0:.8f}".format(current_min_ask))
-                send_notification('Сливаем по текущей цене {current_min_ask} пару {fuckup_pair}, т.к. не смогли продать '
-                                  'за {default_loss_time} дней'.format(current_min_ask=current_min_ask,
+                send_notification('Сливаем по текущей цене {current_min_ask} пару {fuckup_pair}, т.к. не смогли '
+                                  'продать за {default_loss_time} дней'.format(current_min_ask=current_min_ask,
                                                                        fuckup_pair=fuckup_pair,
-                                                                       default_loss_time=main_settings.default_loss_time))
+                                                                       default_loss_time=main_settings.
+                                                                       default_loss_time))
             else:
-                current_min_ask = trade_bot.get_minask(trade_bot.get_currency_info(trade_bot.get_coin_details(fuckup_pair)))
+                current_min_ask = trade_bot.get_minask(trade_bot.get_currency_info(
+                    trade_bot.get_coin_details(fuckup_pair)))
                 send_notification('Застряли в {pair}. Объём сделки: {quantity}. Курс в ордере {order_price}. '
                                   'Курс текущий {current_min_ask}. Либо ждем 14 дней, либо мониторим эти сообщения '
                                   'и сливаем руками.'
-                                  .format(pair=fuckup_pair, quantity=fuckup_quantity,order_price=fuckup_price,
+                                  .format(pair=fuckup_pair, quantity=fuckup_quantity, order_price=fuckup_price,
                                           current_min_ask=current_min_ask))
         if 'BUY' in orders_id[0]['type']:
             cancel_buy_orders_id.append(order)
@@ -70,14 +73,12 @@ def init_trader(bot, job):
                     trade_bot.sell_currency(trade_bot.get_btc_ex(balance), "{0:.8f}".format(balances[balance]),
                                             "{0:.8f}".format(min_ask))
                 else:
-                    send_notification('Не подходящий курс для продажи {}, попробуем в следующий заход: '.format(balance))
-
+                    send_notification('Не подходящий курс для продажи {}, попробуем в следующий заход'.format(balance))
 
     order_size = trade_bot.get_min_order_size(main_settings.min_order_mult)
-    max_num_orders = int((btc_balance * 0.3) / order_size)
+    max_num_orders = int((btc_balance * 0.99) / order_size)
 
     pair_ls = trade_bot.get_market_conditions()
-
 
     rg_list = []
 
@@ -103,12 +104,15 @@ def init_trader(bot, job):
 
     rg_list.sort(key=lambda i: i['rang'], reverse=True)
 
+    # if max_num_orders > 3:
     if max_num_orders > len(rg_list):
+        # max_num_orders = 3
         max_num_orders = len(rg_list)
 
     if max_num_orders > 0:
         order_size = (btc_balance * 0.99) / max_num_orders
 
+        # while (order_size * max_num_orders) > (0.001 * 0.99):
         while (order_size * max_num_orders) > (btc_balance * 0.99):
             order_size -= 0.00000001
 
@@ -129,7 +133,6 @@ def init_trader(bot, job):
         i += 1
 
     job.interval = random.randint(60, 180)
-
 
 if __name__ == '__main__':
     init_trader()
