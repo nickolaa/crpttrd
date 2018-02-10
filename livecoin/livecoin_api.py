@@ -80,17 +80,18 @@ class LivecoinApi():
     def get_maxbid(self, pair):
         return float(pair['maxBid'])
 
-    def get_balanses(self):
+    def get_balanses_available(self):
         method = '/payment/balances'
         data = OrderedDict([])
         response = self.get_request(method, data)
         coin_list = response.json()
         balances = {}
         for coin in coin_list:
-            if ('None' not in str(coin['available'])):
-                if (coin['available'] > 0):
-                    if coin['currency'] not in balances:
-                        balances[coin['currency']] = coin['available']
+            if coin['type'] == 'available':
+                if 'None' not in str(coin['value']):
+                    if coin['value'] > 0:
+                        if coin['currency'] not in balances:
+                            balances[coin['currency']] = coin['value']
 
         return balances
 
@@ -105,7 +106,7 @@ class LivecoinApi():
             for order in openorders:
                 if order['orderStatus'] == 'OPEN':
                     orders_id.append({'pair': order['currencyPair'], 'id': order['id'], 'issuetime': order['issueTime'],
-                                      'type': order['type']})
+                                      'type': order['type'], 'quantity': order['quantity'], 'price': order['price']})
         return orders_id
 
     def get_partiallyorders(self):
