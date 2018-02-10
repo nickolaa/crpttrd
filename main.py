@@ -32,6 +32,7 @@ def init_trader(bot, job):
             if datetime.now() - datetime.fromtimestamp(issuetime_order / 1000) >= \
                     timedelta(days=main_settings.default_loss_time):
                 trade_bot.cancel_orders(order)
+                send_notification('Отменил ордер {order}, {pair}'.format(order=order['id'], pair=order['currencyPair']))
                 current_min_ask = trade_bot.get_minask(fuckup_pair)
                 trade_bot.sell_currency(fuckup_pair, "{0:.8f}".format(fuckup_quantity),
                                         "{0:.8f}".format(current_min_ask))
