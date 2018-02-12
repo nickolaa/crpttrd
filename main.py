@@ -136,7 +136,7 @@ def init_trader(bot, job):
             order_size = btc_balance
         i += 1
 
-    job.interval = random.randint(60, 180)
+    job.interval = random.randint(70, 180)
 
 
 if __name__ == '__main__':
