@@ -166,6 +166,9 @@ class LivecoinApi():
         if value['success'] == True:
             send_notification('успешно создан ордер на покупку {quantity}, {pair}, по курсу {price} ID: {value}'.
                               format(quantity=str(quantity), pair=pair, price=str(price), value=value['orderId']))
+        elif value['exception']:
+            send_notification('Попытка создать ордер на покупку:{pair} Ошибка: {value}. Нужно больше золота!'
+                              .format(pair=pair, value=value['exception']))
         else:
             send_notification('уже есть ордер на продажу ID: {value}'.format(value=value['orderId']))
 

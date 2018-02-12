@@ -44,11 +44,13 @@ def init_trader(bot, job):
             else:
                 current_min_ask = trade_bot.get_minask(trade_bot.get_currency_info(
                     trade_bot.get_coin_details(fuckup_pair)))
+                ex_list.append(fuckup_pair)
                 send_notification('Застряли в {pair}. Объём сделки: {quantity}. Курс в ордере {order_price}. '
                                   'Курс текущий {current_min_ask}. Либо ждем 14 дней, либо мониторим эти сообщения '
-                                  'и сливаем руками.'
+                                  'и сливаем руками. Прошло уже {days}'
                                   .format(pair=fuckup_pair, quantity=fuckup_quantity, order_price=fuckup_price,
-                                          current_min_ask=current_min_ask))
+                                          current_min_ask=current_min_ask,
+                                          days=datetime.now() - datetime.fromtimestamp(issuetime_order / 1000)))
         if 'BUY' in orders_id[0]['type']:
             cancel_buy_orders_id.append(order)
     trade_bot.cancel_orders(cancel_buy_orders_id)
@@ -105,12 +107,13 @@ def init_trader(bot, job):
 
     rg_list.sort(key=lambda i: i['rang'], reverse=True)
 
-    # if max_num_orders > 3:
     if max_num_orders > len(rg_list):
-        # max_num_orders = 3
         max_num_orders = len(rg_list)
 
-    if max_num_orders > 0:
+    if 0 <= max_num_orders <= 1:
+        max_num_orders = 3
+        order_size = (btc_balance * 0.99) / max_num_orders
+    elif max_num_orders > 1:
         order_size = (btc_balance * 0.99) / max_num_orders
 
         # while (order_size * max_num_orders) > (0.001 * 0.99):
@@ -134,6 +137,7 @@ def init_trader(bot, job):
         i += 1
 
     job.interval = random.randint(60, 180)
+
 
 if __name__ == '__main__':
     init_trader()
