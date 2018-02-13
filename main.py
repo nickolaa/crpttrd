@@ -77,6 +77,7 @@ def init_trader(bot, job):
                                             "{0:.8f}".format(min_ask))
                 else:
                     send_notification('Не подходящий курс для продажи {}, попробуем в следующий заход'.format(balance))
+                    ex_list.append(trade_bot.get_btc_ex(balance))
 
     order_size = trade_bot.get_min_order_size(main_settings.min_order_mult)
     max_num_orders = int((btc_balance * 0.99) / order_size)
@@ -136,7 +137,7 @@ def init_trader(bot, job):
             order_size = btc_balance
         i += 1
 
-    job.interval = random.randint(70, 180)
+    job.interval = random.randint(120, 180)
 
 
 if __name__ == '__main__':

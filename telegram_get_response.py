@@ -22,7 +22,7 @@ def restricted(func):
 
 @restricted
 def activate_trader_bot(bot, update, job_queue, user_data):
-    trader_job = job_queue.run_repeating(init_trader, interval=90, first=0)
+    trader_job = job_queue.run_repeating(init_trader, interval=180, first=0)
     user_data['trader_job'] = trader_job
     send_notification('торговый бот начал работу')
 
