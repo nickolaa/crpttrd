@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77bfb1dc-9d4e-437c-9826-19702f0e93f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/telegram_get_response.py" afterPath="$PROJECT_DIR$/telegram_get_response.py" />
+      <change beforePath="$PROJECT_DIR$/main_settings.py" afterPath="$PROJECT_DIR$/main_settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="139" column="37" lean-forward="false" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+            <state relative-caret-position="146">
+              <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="34">
+              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -72,8 +71,8 @@
       <file leaf-file-name="livecoin_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            <state relative-caret-position="62">
+              <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -116,11 +115,11 @@
         <option value="$PROJECT_DIR$/telegram_features/telegram_private_keys.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_notification.py" />
         <option value="$PROJECT_DIR$/telegram_features/telegram_get_response.py" />
-        <option value="$PROJECT_DIR$/main_settings.py" />
         <option value="$PROJECT_DIR$/111.py" />
         <option value="$PROJECT_DIR$/livecoin/livecoin_api.py" />
         <option value="$PROJECT_DIR$/telegram_get_response.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/main_settings.py" />
       </list>
     </option>
   </component>
@@ -451,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518465109777</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="job interval corrections">
+      <created>1518496265851</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1518496265851</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -532,7 +538,8 @@
     <MESSAGE value="+ send notification" />
     <MESSAGE value="error notification + max_num_orders correction" />
     <MESSAGE value="job interval" />
-    <option name="LAST_COMMIT_MESSAGE" value="job interval" />
+    <MESSAGE value="job interval corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="job interval corrections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,6 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -791,14 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/111.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -817,16 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/telegram_get_response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -839,11 +829,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="139" column="37" lean-forward="false" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+        <state relative-caret-position="146">
+          <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/livecoin/livecoin_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
